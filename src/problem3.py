@@ -32,9 +32,6 @@ def main():
             factors.append(next_try)
         next_try += 1
     return factors[-1]
-    product = 1
-    for x in factors:
-        product *= x
 
 if __name__ == "__main__":
-    main(argv)
+    print(main())

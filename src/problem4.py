@@ -9,7 +9,8 @@ numbers.
 def is_pal(num):
     if list(str(num)) == list(reversed(list(str(num)))):
         return True
-def main(argv=None):
+
+def main():
     max_pal = 0
     for a in range(999, 100, -1):
         for b in range(999, 100, -1):
@@ -21,4 +22,4 @@ def main(argv=None):
     return max_pal
 
 if __name__ == "__main__":
-    main(argv)
+    print(main())

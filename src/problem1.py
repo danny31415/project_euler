@@ -15,4 +15,4 @@ def main():
     return total
 
 if __name__ == "__main__":
-    main()
+    print(main())

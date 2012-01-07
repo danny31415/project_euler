@@ -8,7 +8,7 @@ in the Fibonacci sequence whose values do not exceed four million,
 find the sum of the even-valued terms.
 
 """
-def main(argv=None):
+def main():
     last_num = 1
     num = 2
     total = 2
@@ -20,4 +20,4 @@ def main(argv=None):
     return total
 
 if __name__ == "__main__":
-    main()
+    print(main())
