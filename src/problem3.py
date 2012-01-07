@@ -1,9 +1,10 @@
-# Problem 3
-# 02 November 2001
+"""Project Euler Problem 3
 
-# The prime factors of 13195 are 5, 7, 13 and 29.
+The prime factors of 13195 are 5, 7, 13 and 29.  What is the largest
+prime factor of the number 600851475143 ?
 
-# What is the largest prime factor of the number 600851475143 ?
+"""
+from __future__ import print_function
 
 primes = [2,3,5,7,11]
 
@@ -15,22 +16,25 @@ def is_prime(num):
             return False
     primes.append(num)
     return True
-                
-# try to see if any of our primes are factors for the number
-# find another prime
-factors = []
-num = 600851475143
-next_try = 2
 
-while num > 1:
-    while not(is_prime(next_try)):
+def main():
+    # try to see if any of our primes are factors for the number
+    # find another prime
+    factors = []
+    num = 600851475143
+    next_try = 2
+    
+    while num > 1:
+        while not(is_prime(next_try)):
+            next_try += 1
+        while num % next_try == 0:
+            num = int(num/next_try)
+            factors.append(next_try)
         next_try += 1
-    while num % next_try == 0:
-        num = int(num/next_try)
-        factors.append(next_try)
-    next_try += 1
-print(factors[-1])
-product = 1
-for x in factors:
-    product *= x
-#print(product)
+    return factors[-1]
+    product = 1
+    for x in factors:
+        product *= x
+
+if __name__ == "__main__":
+    main(argv)

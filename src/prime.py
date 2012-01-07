@@ -8,10 +8,6 @@ def lcm(a, b):
     """Return lowest common multiple."""
     return a * b // gcd(a, b)
 
-def lcmm(*args):
-    """Return lcm of args."""   
-    return 
-
 primes = [2,3,5,7,11]
 
 def is_prime(num):
@@ -41,5 +37,3 @@ def factors(n):
             i += 1
     if n > 1:
         yield n
-    
-    
