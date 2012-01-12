@@ -8,6 +8,7 @@ import problem2
 import problem3
 import problem4
 import problem5
+import problem6
 
 def main(argv=None):
     parser = OptionParser()
