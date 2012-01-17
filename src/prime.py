@@ -8,9 +8,11 @@ def lcm(a, b):
     """Return lowest common multiple."""
     return a * b // gcd(a, b)
 
-primes = [2,3,5,7,11]
+primes = [2,3,5,7]
 
 def is_prime(num):
+    if num is 1:
+        return false
     if num in primes:
         return True
     for p in primes:
@@ -23,6 +25,13 @@ def gen_primes_in_range(min, max):
     for num in range(min, max):
         if is_prime(num):
             yield num
+
+def gen_primes(min=2):
+    num = min
+    while 1:
+        if is_prime(num):
+            yield num
+        num += 1
 
 def factors(n):
     # return a list of prime factors
